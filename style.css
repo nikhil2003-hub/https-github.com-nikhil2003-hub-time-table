@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: #0b0c10;
+    color: #66ff99;
+}
+
+.container {
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #66ff99;
+    text-shadow: 0 0 10px #66ff99;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: rgba(0, 255, 100, 0.05);
+    border: 1px solid #66ff99;
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 20px rgba(102, 255, 153, 0.3);
+    color: #ccffcc;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px #66ff99;
+}
+
+.card.highlight {
+    border-color: #00ffcc;
+    box-shadow: 0 0 25px #00ffcc;
+}
+
+.time {
+    font-size: 1.1rem;
+    color: #00ffcc;
+    text-shadow: 0 0 5px #00ffcc;
+}
+
+.subject {
+    font-weight: bold;
+    margin: 10px 0;
+    color: #66ff99;
+    text-shadow: 0 0 5px #66ff99;
+}
+
+.topic, .faculty, .classroom {
+    font-size: 0.95rem;
+    margin-top: 5px;
+    color: #99ffcc;
+}
+
+.toggle-btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background: #66ff99;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 10px #66ff99;
+    transition: background 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #00cc66;
+    box-shadow: 0 0 15px #00cc66;
+}
+
+body.light-theme {
+    background: #f3f3f3;
+    color: #111;
+}
+
+body.light-theme .card {
+    background: #fff;
+    color: #000;
+    border-color: #333;
+    box-shadow: none;
+}
+
+body.light-theme .toggle-btn {
+    background: #000;
+    color: #fff;
+    box-shadow: 0 0 5px #333;
+}
